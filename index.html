@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Grid - grid-gap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #555;
+            font-style: italic;
+        }
+
+        /* --- VÍ DỤ 1 --- */
+        .grid-container-1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px; /* Cả hàng và cột đều cách nhau 20px */
+            background-color: #ddd; /* Màu nền xám để lộ rõ grid-gap */
+            padding: 20px; /* Thêm padding để gap không dính vào viền ngoài */
+            border: 1px solid #aaa;
+        }
+
+        .grid-container-1 div {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* --- VÍ DỤ 2 --- */
+        .grid-container-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px 10px; /* Hàng cách nhau 30px, cột cách nhau 10px */
+            background-color: #ddd; /* Màu nền xám để lộ rõ grid-gap */
+            padding: 20px;
+            border: 1px solid #aaa;
+        }
+
+        .grid-container-2 div {
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ví dụ 1: Thiết lập khoảng cách chung (grid-gap: 20px)</h2>
+    <p>Khoảng cách giữa các cột và các hàng đều bằng nhau và bằng 20px.</p>
+    <div class="grid-container-1">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
+    </div>
+
+    <h2>Ví dụ 2: Thiết lập khoảng cách hàng và cột khác nhau (grid-gap: 30px 10px)</h2>
+    <p>Khoảng cách ngang giữa các hàng (row-gap) là 30px, khoảng cách dọc giữa các cột (column-gap) là 10px.</p>
+    <div class="grid-container-2">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
+        <div>Ô 5</div>
+        <div>Ô 6</div>
+    </div>
+
+</body>
+</html>
